@@ -1,0 +1,7 @@
+Xystray is a simple implementation of freedesktop.org systray
+specification (a.k.a notification area) for XWindow system. It is meant
+for use in simple desktop environments which does not provide such
+facility by default eg. FVWM. It may also run under GNOME or KDE but
+the default tray programme has to be disabled then.
+
+For details visit: http://steelman.github.com/xystray/index.html
