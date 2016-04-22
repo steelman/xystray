@@ -65,7 +65,7 @@ void sigint(XtPointer topwidget, XtSignalId* sig) {
 	XtDestroyWidget(tw);
 	XtDestroyApplicationContext(XtWidgetToApplicationContext(tw));
 	exit(0);
-}	
+}
 
 static void
 quit(Widget w, XEvent *event, String *params, Cardinal *num_params) {
@@ -115,7 +115,7 @@ main (int argc, char *argv[])
 	NULL);
 
   XtAppAddActions (app_con, xysact, XtNumber(xysact));
-  XtOverrideTranslations(topwidget,    
+  XtOverrideTranslations(topwidget,
 	XtParseTranslationTable ("<Message>WM_PROTOCOLS: quit()"));
 
 

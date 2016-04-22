@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <assert.h>
 #include <X11/StringDefs.h>
 #include <X11/Intrinsic.h>
@@ -75,10 +77,10 @@ XystrayClassRec xystrayClassRec = {
     /* num_actions              */      0,
     /* resources                */      resources,
     /* resource_count           */      XtNumber(resources),
-    /* xrm_class                */      NULLQUARK,          
+    /* xrm_class                */      NULLQUARK,
     /* compress_motion          */      TRUE,
     /* compress_exposure        */      XtExposeCompressMaximal,
-    /* compress_enterleave      */      TRUE,                   
+    /* compress_enterleave      */      TRUE,
     /* visible_interest         */      FALSE,
     /* destroy                  */      XWtDestroy,
     /* resize                   */      NULL,
@@ -96,7 +98,7 @@ XystrayClassRec xystrayClassRec = {
     /* extension                */      NULL
     }, { 0 }
 };
-    
+
 WidgetClass xystrayWidgetClass = (WidgetClass) &xystrayClassRec;
 
 static void
@@ -281,7 +283,6 @@ XWtEventHandler(Widget gw, XPointer xptr, XEvent* xev, Boolean* cont) {
 }
 
 static void XWtRecvMessage(XystrayWidget xys, XClientMessageEvent* xev) {
-	
 	Atom selection_msg = xys->xystray.selection_atom; /*XXX: potrzebne?*/
 	Atom opcode_msg = xys->xystray.opcode_atom;
 	Atom data_msg = xys->xystray.data_atom;
@@ -319,10 +320,9 @@ static void XWtRecvMessage(XystrayWidget xys, XClientMessageEvent* xev) {
 		if (xev->format != 8) {
 			return;
 		}
-		printf("Data Message: (%d)%s\n", xev->message_type,b);
-
+		printf("Data Message: (%d)%s\n", (int)xev->message_type,b);
 	} else {
-		printf("Unknown Message: (%d)%s\n", xev->message_type,b);
+		printf("Unknown Message: (%d)%s\n", (int)xev->message_type,b);
 	}
 	XFree(b);
 	return;
