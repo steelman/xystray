@@ -1,0 +1,88 @@
+span, ul, li, div, p, h1, h2, h3, h4 {
+/* border: 3px solid blue; /**/
+ border: none;
+}
+
+a:visited,a:link {
+ text-decoration: none;
+}
+
+a:hover {
+ background-color: #f4eddf;
+}
+
+a.nohov:hover {
+ background-color: inherit;
+}
+
+.screenshot {
+ float: right;
+ margin-left: 1em;
+ font-size: 8pt;
+ font-style: italic;
+}
+
+body {
+  min-width: 640px;
+  font-family: "Verdana", sans-serif;
+  font-size: 12pt;
+  background-color: #e4ddcf;
+  margin-left: 60pt ;
+  margin-right: 60pt ;
+  /*border-color: #c8ba9d; /**/
+}
+
+dl, ul, p {
+  padding-left: 12%;
+  text-align: justify;
+}
+
+.cmdopt {
+ font-weight: bold;
+}
+
+dt {
+ font-weight: bold;
+}
+
+div.cmdopt {
+ padding-left: 12%;
+}
+
+p.cmdopt {
+ margin-top: 0;
+ padding-left: 24%;
+ font-weight: normal;
+}
+
+h1, h2, h3, h4, h5 {
+  clear: both;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  color: black;
+  clear: left;
+}
+
+h2 {
+  font-size: 1.6em;
+  text-align: left;
+}
+
+pre {
+  width: 75%;
+  font-size: 0.75em;
+  border-style: dashed;
+  border-color: #7f7f7f;
+  background-color: #b9b9b9;
+  border-width: 0.15em;
+}
+
+.copyright {
+  border-width: 0pt;
+  font-size: 8pt;
+  font-family: sans-serif;
+}
+
