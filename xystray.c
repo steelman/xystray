@@ -27,7 +27,6 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/Intrinsic.h>
-#include <X11/Xaw/Cardinals.h>
 #include <X11/Shell.h>
 #include <X11/StringDefs.h>
 #include "Xystray.h"
@@ -90,7 +89,7 @@ main (int argc, char *argv[])
   memset(signalids, 0, sizeof(signalids));
   topwidget = XtOpenApplication(&app_con, "Xystray",
 		options, XtNumber(options), &argc, argv,
-		NULL, topLevelShellWidgetClass, NULL, ZERO);
+		NULL, topLevelShellWidgetClass, NULL, 0);
 
   XtVaSetValues(topwidget,
 	XtNallowShellResize, False,
